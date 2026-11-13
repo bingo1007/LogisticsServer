@@ -20,7 +20,7 @@ namespace LogisticsServer.Controllers
         [HttpPost]  //해당 주소로 post 요청이 온다면 실행할 로직
         public IActionResult CreateParcel([FromBody] ParcelRequest request)  //Http 요청의 바디에서 데이터(JSON)를 가져옴. 그 데이터는 다시 c#의 데이터 모델로 할당. 즉 이 CreateParcel을 실행하기 전 이미 request 객체는 만들어지고 할당도 끝남.
         {
-            if(request.ParcelId < 1)
+            if (request.ParcelId < 1)
             {
                 return BadRequest("Parcel ID must be greater than 0.");
             }
@@ -40,7 +40,7 @@ namespace LogisticsServer.Controllers
             _context.Parcels.Add(parcel);  //만든 parcel객체를 context의 parcels에 저장.
             _context.SaveChanges();  //변동사항을 db에 저장
 
-                return Ok(new  //만들어진 request객체를 사용하여 응답 json을 만드는 과정
+            return Ok(new  //만들어진 request객체를 사용하여 응답 json을 만드는 과정
             {
                 Message = "Parcel Received",
                 ParcelId = request.ParcelId,
@@ -56,6 +56,17 @@ namespace LogisticsServer.Controllers
                 .Where(p => p.Destination == "DAEJEON").ToList();  //LINQ는 조건부 검색을 도와준다. where을 사용하여 조건을 입력할 수 있다.
 
             return Ok(parcels);  //조회한 택배 목록을 ok와 함께 반환
+        }
+
+        [HttpGet("{id}")]  //특정 id의 parcel만 따로 호출하는 메서드
+        public IActionResult GetParcelById(int id)
+        {
+            var parcel = _context.Parcels.FirstOrDefault(p => p.Id == id);
+            if(parcel==null)
+            {
+                return NotFound("Parcel not found...");  //찾지 못했을때 반환되는 값. 404가 반환된다. 
+            }
+            return Ok(parcel);  //조회한 택배 목록을 ok와 함께 반환
         }
     }
 }

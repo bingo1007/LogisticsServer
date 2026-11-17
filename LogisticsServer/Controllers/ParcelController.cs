@@ -51,9 +51,9 @@ namespace LogisticsServer.Controllers
         [HttpGet]  //이 메서드가 Get을 처리
         public IActionResult GetParcels()
         {
-            //var parcels = _context.Parcels.ToList();  //데이터를 조회하여 List형태로 가져옴, 그 결과값을 parcels라는 변수에 저장. 즉 parcels에는 지금 db의 parcel 데이터 집합이 들어있다.
-            var parcels = _context.Parcels
-                .Where(p => p.Destination == "DAEJEON").ToList();  //LINQ는 조건부 검색을 도와준다. where을 사용하여 조건을 입력할 수 있다.
+            var parcels = _context.Parcels.ToList();  //데이터를 조회하여 List형태로 가져옴, 그 결과값을 parcels라는 변수에 저장. 즉 parcels에는 지금 db의 parcel 데이터 집합이 들어있다.
+            /*var parcels = _context.Parcels
+                .Where(p => p.Destination == "DAEJEON").ToList();  //LINQ는 조건부 검색을 도와준다. where을 사용하여 조건을 입력할 수 있다.*/
 
             return Ok(parcels);  //조회한 택배 목록을 ok와 함께 반환
         }

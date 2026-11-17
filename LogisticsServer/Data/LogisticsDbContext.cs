@@ -9,5 +9,6 @@ namespace LogisticsServer.Data
         public LogisticsDbContext(DbContextOptions<LogisticsDbContext> options) : base(options) 
         { }
         public DbSet<Parcel> Parcels { get; set; } //데이터 베이스에 저장할 Parcel 데이터들을 조회하거나 추가하는데 사용되는 자료
+        public DbSet<ParcelEvent> ParcelEvents { get; set; }  //데이터 베이스에 저장할 ParcelEvent 데이터들을 조회하거나 추가하는데 사용되는 자료
     }
 }

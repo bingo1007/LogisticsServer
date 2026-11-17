@@ -37,6 +37,31 @@ namespace LogisticsServer.Migrations
 
                     b.ToTable("Parcels");
                 });
+
+            modelBuilder.Entity("LogisticsServer.Models.ParcelEvent", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Destination")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("EventType")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("OccurredAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ParcelId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ParcelEvents");
+                });
 #pragma warning restore 612, 618
         }
     }

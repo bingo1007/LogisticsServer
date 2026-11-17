@@ -26,6 +26,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "LogisticsServer.Controllers.ParcelController",
+    "Method": "GetParcelById",
+    "RelativePath": "api/Parcel/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticsServer.Controllers.ParcelEventController",
+    "Method": "CreateParcelEvent",
+    "RelativePath": "api/ParcelEvent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "LogisticsServer.Models.ParcelEventRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LogisticsServer.Controllers.ParcelEventController",
+    "Method": "GetParcelEvents",
+    "RelativePath": "api/ParcelEvent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LogisticsServer.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

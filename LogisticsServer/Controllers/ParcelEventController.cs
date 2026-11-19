@@ -61,5 +61,17 @@ namespace LogisticsServer.Controllers
 
             return Ok(events);
         }
+
+        [HttpGet("recent")]
+        public IActionResult GetRecentEvents()
+        {
+            var events = _context.ParcelEvents
+                .OrderByDescending(e => e.OccurredAt)
+                .ThenByDescending(e => e.Id)
+                .Take(5)
+                .ToList();
+
+            return Ok(events);
+        }
     }
 }

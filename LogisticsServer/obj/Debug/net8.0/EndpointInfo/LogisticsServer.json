@@ -110,6 +110,18 @@
         }
       }
     },
+    "/api/ParcelEvent/recent": {
+      "get": {
+        "tags": [
+          "ParcelEvent"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Statistics": {
       "get": {
         "tags": [

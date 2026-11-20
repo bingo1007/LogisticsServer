@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zXQUz31KqhU=",
+  "dgSpecHash": "ei+jwErZDgc=",
   "success": true,
   "projectFilePath": "C:\\work\\c++\\LogisticsServer\\LogisticsServer\\LogisticsServer.csproj",
   "expectedPackageFiles": [
@@ -54,7 +54,10 @@
     "C:\\Users\\user\\.nuget\\packages\\system.reflection.metadata\\6.0.1\\system.reflection.metadata.6.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.18\\microsoft.netcore.app.runtime.win-x64.8.0.18.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.18\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.18.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.18\\microsoft.aspnetcore.app.runtime.win-x64.8.0.18.nupkg.sha512"
   ],
   "logs": []
 }
